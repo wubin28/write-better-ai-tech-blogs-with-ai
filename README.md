@@ -2,6 +2,23 @@
 
 本代码库提供一套“角度-搜索-撰写”三段式工作流（分别对应3个skill），帮助AI科技博主高效产出有深度、有差异化视角的 AI 科技技术博客。工作流由三个 GitHub Copilot CLI Skill 驱动，结合人工评审节点，实现从选题到可发布成品的全链路自动化。
 
+### Template
+
+#### /tech-blog-direction
+```
+/tech-blog-direction 帮我分析写作角度：选题是"XXX"，目标读者是"XXX"。参考文章参见"reference-tech-blog.md"。
+```
+
+#### /tech-blog-search
+```
+/tech-blog-search 选择角度："xxx"
+```
+
+#### /write-a-better-tech-blog
+```
+/write-a-better-tech-blog 请参考 "tech-blog-search-result-<timestamp>.md"，然后将 "reference-tech-blog.md" 用中文进行改写，形成一份新的博客。新博客要求能吸引读者继续读下去，并能激发读者评论和转发。
+```
+
 ### 安装 Skills
 
 #### 前置条件
@@ -183,3 +200,9 @@ flowchart TD
 - **角度前置，避免无效搜索**：先通过 `tech-blog-direction` 锁定方向，再搜索，避免素材与文章方向脱节。
 - **链接真实性红线**：`tech-blog-search` 严禁捏造链接，无法确认时标注"链接待核验"。
 - **一手经验是差异化核心**：`write-a-better-tech-blog` 会用 `[待补充]` 标记所有需要你本人确认的内容，这些细节是 AI 无法伪造的价值所在。
+
+---
+
+### License
+
+MIT
