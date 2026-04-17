@@ -2,10 +2,41 @@
 
 本代码库提供一套三段式工作流，帮助 AI 辅助软件开发咨询师高效产出有深度、有差异化视角的 AI 科技技术博客。工作流由三个 GitHub Copilot CLI Skill 驱动，结合人工评审节点，实现从选题到可发布成品的全链路自动化。
 
-### 前置条件
+### 安装 Skills
 
-- 已安装 [GitHub Copilot CLI](https://github.com/features/copilot/cli)（支持 Skill 功能）
-- 在对话中加载本代码库的 `skills/` 目录
+#### 前置条件
+
+- 已安装支持 Skill 功能的 AI 编程助手客户端（能识别 `~/.claude/skills/` 目录，例如 Claude Code）
+
+#### macOS / Linux
+
+```bash
+# 1. 克隆本代码库
+git clone https://github.com/your-org/write-better-ai-tech-blogs-with-ai.git
+cd write-better-ai-tech-blogs-with-ai
+
+# 2. 确保目标目录存在
+mkdir -p ~/.claude/skills
+
+# 3. 将三个 skill 文件夹复制到个人 skills 目录
+cp -r skills/tech-blog-direction ~/.claude/skills/
+cp -r skills/tech-blog-search ~/.claude/skills/
+cp -r skills/write-a-better-tech-blog ~/.claude/skills/
+```
+
+完成后，`~/.claude/skills/` 目录结构如下：
+
+```
+~/.claude/skills/
+├── tech-blog-direction/
+│   └── SKILL.md
+├── tech-blog-search/
+│   └── SKILL.md
+└── write-a-better-tech-blog/
+    └── SKILL.md
+```
+
+重启客户端后，三个 Skill 即可在对话中直接触发。
 
 ---
 
