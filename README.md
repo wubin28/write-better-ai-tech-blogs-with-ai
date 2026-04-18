@@ -4,17 +4,17 @@
 
 ### Template
 
-#### /tech-blog-direction
+#### 01-get-3-directions
 ```
 /tech-blog-direction 帮我分析写作角度：选题是"XXX"，目标读者是"XXX"。参考文章参见"reference-tech-blog.md"。
 ```
 
-#### /tech-blog-search
+#### 02-pick-one-direction
 ```
 /tech-blog-search 选择角度："xxx"
 ```
 
-#### /write-a-better-tech-blog
+#### 04-draft-a-tech-blog
 ```
 /write-a-better-tech-blog 请参考 "tech-blog-search-result-<timestamp>.md"，然后将 "reference-tech-blog.md" 用中文进行改写，形成一份新的博客。新博客要求能吸引读者继续读下去，并能激发读者评论和转发。
 ```
