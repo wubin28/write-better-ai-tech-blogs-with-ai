@@ -1,5 +1,5 @@
 ---
-name: write-a-better-tech-blog
+name: write-a-tech-blog
 description: Use when the user provides raw writing materials (notes, case records, tool test results, code snippets, or other markdown content) and wants to transform them into a polished, structured technical blog post. Trigger when the user says "帮我写博客", "把这些素材写成文章", "写一篇技术博客", "加工成博文", or provides raw notes/drafts asking for a blog-ready article. This skill targets AI-assisted software development consultants publishing technical content in Chinese.
 ---
 

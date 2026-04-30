@@ -16,7 +16,7 @@
 
 #### 04-draft-a-tech-blog
 ```
-/write-a-better-tech-blog 请参考 "@my-ai-tech-blogs/tech-blog-search-result-<timestamp>.md"，然后将 "reference-tech-blog.md" 用中文进行改写，形成一份新的博客。新博客要求能吸引读者继续读下去，并能激发读者评论和转发。
+/write-a-tech-blog 请参考 "@my-ai-tech-blogs/tech-blog-search-result-<timestamp>.md"，然后将 "reference-tech-blog.md" 用中文进行改写，形成一份新的博客。新博客要求能吸引读者继续读下去，并能激发读者评论和转发。
 ```
 
 ### 安装 Skills
@@ -38,7 +38,7 @@ mkdir -p ~/.claude/skills
 # 3. 将三个 skill 文件夹复制到个人 skills 目录
 cp -r skills/tech-blog-direction ~/.claude/skills/
 cp -r skills/tech-blog-search ~/.claude/skills/
-cp -r skills/write-a-better-tech-blog ~/.claude/skills/
+cp -r skills/write-a-tech-blog ~/.claude/skills/
 ```
 
 完成后，`~/.claude/skills/` 目录结构如下：
@@ -49,7 +49,7 @@ cp -r skills/write-a-better-tech-blog ~/.claude/skills/
 │   └── SKILL.md
 ├── tech-blog-search/
 │   └── SKILL.md
-└── write-a-better-tech-blog/
+└── write-a-tech-blog/
     └── SKILL.md
 ```
 
@@ -63,7 +63,7 @@ cp -r skills/write-a-better-tech-blog ~/.claude/skills/
 |---|---|---|
 | `tech-blog-direction` | 低成本头脑风暴，输出 3 个差异化写作角度 | ❌ 不联网 |
 | `tech-blog-search` | 按选定角度搜索最近 1 日国内外热点素材 | ✅ 联网搜索 |
-| `write-a-better-tech-blog` | 将素材加工为可发布的技术博客成品 | ❌ 不联网 |
+| `write-a-tech-blog` | 将素材加工为可发布的技术博客成品 | ❌ 不联网 |
 
 ---
 
@@ -87,7 +87,7 @@ flowchart TD
     F --> G["tech-blog-search 执行搜索<br/>范围：最近1日<br/>来源：国内外主流 AI 科技媒体 + 必要补充来源"]
     G --> G_out["输出：<br/>1. 搜索后的素材 markdown 文件<br/>2. 按 4 类分组整理<br/>3. 热度排序<br/>4. 文件保存路径"]
 
-    G_out --> H["/write-a-better-tech-blog<br/>职责：基于素材生成可发布的技术博客成品"]
+    G_out --> H["/write-a-tech-blog<br/>职责：基于素材生成可发布的技术博客成品"]
     H_in["输入：<br/>1. 选定角度的素材 markdown 文件<br/>2. 原始写作素材/笔记（如有）"] -.-> H
     H --> H_out["输出：<br/>1. 博客正文草稿<br/>2. 导读<br/>3. 本文速览<br/>4. [待补充]清单<br/>5. 发布前检查清单<br/>6. 多平台分发建议<br/>7. 微信公众号备选标题 10 个<br/>8. 豆包封面图提示词<br/>9. 保存好的 markdown 文件路径"]
 
@@ -115,7 +115,7 @@ flowchart TD
         G_out
     end
 
-    subgraph Skill3["Skill 3：write-a-better-tech-blog"]
+    subgraph Skill3["Skill 3：write-a-tech-blog"]
         H
         H_in
         H_out
@@ -170,7 +170,7 @@ flowchart TD
 
 ---
 
-#### 第四步（Skill 3）：生成博客成品 — `write-a-better-tech-blog`
+#### 第四步（Skill 3）：生成博客成品 — `write-a-tech-blog`
 
 **触发方式**：
 
@@ -199,7 +199,7 @@ flowchart TD
 
 - **角度前置，避免无效搜索**：先通过 `tech-blog-direction` 锁定方向，再搜索，避免素材与文章方向脱节。
 - **链接真实性红线**：`tech-blog-search` 严禁捏造链接，无法确认时标注"链接待核验"。
-- **一手经验是差异化核心**：`write-a-better-tech-blog` 会用 `[待补充]` 标记所有需要你本人确认的内容，这些细节是 AI 无法伪造的价值所在。
+- **一手经验是差异化核心**：`write-a-tech-blog` 会用 `[待补充]` 标记所有需要你本人确认的内容，这些细节是 AI 无法伪造的价值所在。
 
 ---
 
