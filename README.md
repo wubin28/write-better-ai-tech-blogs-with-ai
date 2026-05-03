@@ -14,7 +14,7 @@
 /tech-blog-search 选择角度："xxx"
 ```
 
-#### 04-draft-a-tech-blog
+#### 03-draft-a-tech-blog
 ```
 /write-a-tech-blog 请参考 "@my-ai-tech-blogs/tech-blog-search-result-<timestamp>.md"，然后将 "reference-tech-blog.md" 用中文进行改写，形成一份新的博客。新博客要求能吸引读者继续读下去，并能激发读者评论和转发。
 ```
